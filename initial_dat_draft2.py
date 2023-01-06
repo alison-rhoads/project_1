@@ -10,7 +10,7 @@ atom_spacing = math.ceil(volume_cube_root / atoms_cube_root)
 
 #create empty 3d array
 
-ngas_box = np.empty((number_of_atoms,number_of_atoms, number_of_atoms)
+gasn_box = np.empty((number_of_atoms,number_of_atoms, number_of_atoms)
 
 #create vector representing atom coordinates
 
@@ -20,10 +20,10 @@ atom_vector = np.linspace(0, 2, number_of_atoms)
 
 for length in range(0, 2, atom_spacing):
     shift_vector_horiz = np.roll(atom_vector, atom_spacing, 0)
-    ngas_box = np.append(shift_vector_horiz, ngas_box, 0)
+    gasn_box = np.append(shift_vector_horiz, gasn_box, 0)
 for length in range(0, 2, atom_spacing):                                        
     shift_vector_vert = np.roll(atom_vector, atom_spacing, 1)
-    ngas_box = np.append(shift_vector_horiz, ngas_box, 1)
+    gasn_box = np.append(shift_vector_horiz, gasn_box, 1)
 
 #create list with atomic number of atoms in array
 
